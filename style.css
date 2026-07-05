@@ -1,0 +1,451 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f8;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.logo h2{
+    color:#8f4d58;
+}
+
+.logo span{
+    font-size:12px;
+    color:#777;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    position:relative;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#8f4d58;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.book-btn{
+    .hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:linear-gradient(135deg,#d4af37,#f7d774);
+    color:#5a2d36;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:50px;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(rgba(255,248,248,.75),rgba(255,248,248,.75)),
+    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    color:#7a4650;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin:20px auto;
+    max-width:700px;
+    font-size:20px;
+    color:#666;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#8f4d58;
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+}
+
+.hero-btn:hover,
+.book-btn:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.services{
+    padding:80px 8%;
+    background:#fff;
+    text-align:center;
+}
+
+.services h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:50px;
+    color:#7a4650;
+    margin-bottom:50px;
+}
+
+.service-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    padding:35px;
+    background:#fff8f8;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card h3{
+    color:#8f4d58;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.1);
+}
+
+.about{
+    padding:100px 8%;
+    background:#fff8f8;
+    text-align:center;
+}
+
+.about h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:50px;
+    color:#7a4650;
+    margin-bottom:30px;
+}
+
+.about p{
+    max-width:800px;
+    margin:20px auto;
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+}
+
+.gallery{
+    padding:100px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.gallery h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:50px;
+    color:#7a4650;
+    margin-bottom:50px;
+}
+
+.gallery-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.gallery-card{
+    width:320px;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.gallery-card img{
+    width:100%;
+    display:block;
+    transition:.4s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.08);
+}
+
+.testimonials{
+    padding:100px 8%;
+    background:#fff8f8;
+    text-align:center;
+}
+
+.testimonials h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:50px;
+    color:#7a4650;
+    margin-bottom:50px;
+}
+
+.testimonial-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.testimonial-card{
+    width:320px;
+    padding:30px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+}
+
+.testimonial-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.testimonial-card h4{
+    color:#f4b400;
+    margin-bottom:10px;
+}
+
+.testimonial-card span{
+    font-weight:bold;
+    color:#7a4650;
+}
+
+.booking{
+    padding:100px 8%;
+    background:white;
+    text-align:center;
+}
+
+.booking h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    color:#7a4650;
+    margin-bottom:40px;
+}
+
+#bookingForm{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+#bookingForm input,
+#bookingForm select{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+#bookingForm button{
+    padding:15px;
+    border:none;
+    background:#8f4d58;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#bookingForm button:hover{
+    background:#6f3742;
+}
+
+.call-btn{
+    position:fixed;
+    bottom:100px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#007bff;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+.call-btn:hover{
+    transform:scale(1.1);
+}
+
+.footer{
+    background:#7a4650;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer h2{
+    margin-bottom:10px;
+    font-size:32px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.footer p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+nav{
+    flex-direction:column;
+    padding:15px;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:15px;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.about h2,
+.gallery h2,
+.testimonials h2,
+.booking h2{
+    font-size:34px;
+}
+
+.gallery-container,
+.testimonial-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.gallery-card,
+.testimonial-card{
+    width:95%;
+}
+
+#bookingForm{
+    width:100%;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm button{
+    width:100%;
+}
+
+.call-btn{
+    width:55px;
+    height:55px;
+    font-size:26px;
+    bottom:20px;
+    right:20px;
+}
+
+}
